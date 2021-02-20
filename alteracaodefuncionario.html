@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8"/>
+      <meta lang="pt-BR"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="estilo.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+      <title>Alteração de cadastro</title>
+   </head>
+
+   <body style="background-color: #836FFF" onload="funcionarioAlterar()">
+      <div align='left' class='logo' style="float: left">
+         <a href="centraldeservicos.html"><img src="logo2.png" alt="Logo da Pet Manager" style="width: 310px"></a>
+      </div><br><br>
+
+      <div align="center">
+         <h2 class="titulo" style="width: 360px;">Alteração de Cadastro</h2>
+      </div><br>
+
+      <div align="center" style="height: 368px;">
+         <u style="color: white;"><p id="emailoriginalfuncionario" style="font-size: 30px; color: white; margin-right: 310px;" ></p></u>
+            <table style="width: 500px">
+               <tr>
+                  <td align="center">
+                     <input type="text" class="form-control" id="nomefuncionario" style="width: 230px" placeholder="Nome completo">
+                     <p></p>
+                  </td>
+               </tr>
+
+               <tr>
+                  <td align="center">
+                     <input type="Email" id="emailfuncionarioalterar" class="form-control" placeholder="Email" onblur="validarEmail4()" onfocus="redefinirMsg4()" style="width: 230px">
+                     <p id="error-email4"></p>
+                  </td>
+               </tr>
+
+               <tr>
+                  <td align="center">
+                     <input type="password" class="form-control" id="senhaalterar" placeholder="Senha" style="width: 230px">
+                     <p></p>
+                  </td>
+               </tr>
+            </table><br>
+
+            <table style="width: 400px;">
+               <tr>
+                  <td align="center">
+                     <button class="btn btn-light" onclick="funcionarioRestaurar()">Restaurar dados</button>
+                  </td>
+
+                  <td align="center">
+                     <b><button class="btn btn-success" style="width: 160px; height: 40px; font-weight: bolder" onclick="efetuaAlteracaoFuncionario()">SALVAR</button></b>
+                  </td>    	
+               </tr>
+            </table><br><br><br>
+      </div>
+
+      <div align='center'>
+         <button class="btn btn-dark" onclick="gerenciadorFuncionarios()">Retornar ao Gerenciador de Funcionários</button><br><br>
+         <button class="btn btn-light" style="width: 290px" onclick="retornaCentraldeServicos()">Retornar à Central de Serviços</button>
+      </div>
+      <script src=javascript.js></script>
+   </body>
+</html>

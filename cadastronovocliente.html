@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta lang="pt-BR"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="estilo.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<title>Cadastro de Cliente</title>
+		<script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript" src="jquery.mask.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$('#clientetelefone').mask('(00) 0000-00000');
+				$('#clientetelefone').blur(function(event){
+					if($(this).val().length == 15){
+						$('#clientetelefone').mask('(00) 00000-0000')
+					} else{
+							$('#clientetelefone').mask('(00) 0000-00000')
+						}
+				})
+			})
+		</script>
+	</head>
+
+	<body style="background-color: #836FFF">
+		<div align='left' class='logo' style="float: left">
+			<a href="centraldeservicos.html"><img src="logo2.png" alt="Logo da Pet Manager" style="width: 310px"></a>
+		</div><br><br>
+
+		<div align="center">
+			<h2 class="titulo" style="width: 320px;">Cadastro de Cliente</h2>
+		</div><br><br>
+
+		<div align="center">
+			<div class="form-group" style="width: 200px">
+				<form>
+					<input type="text" id="clientenomecompleto" class="form-control" placeholder="Nome Completo"><p></p>
+					<input type="Email" id="clienteemail" class="form-control" placeholder="Email" onblur="validarEmail()" onfocus="redefinirMsg()">
+					<p id="error-email"></p>
+					<input type="text" id="clientetelefone" class="form-control" placeholder="Telefone">
+				</form><br>
+
+				<button class="btn btn-dark" onclick="cadastrarNovoCliente()">Efetivar Cadastro</button><br><br>
+			</div><br><br><br><br>
+		</div>
+
+		<div align='center'>
+			<button class="btn btn-dark"  onclick="retornaGerenciadorClientes()">Retornar ao Gerenciador de Clientes</button><br><br>
+			<button class="btn btn-light" style="width: 290px" onclick="retornaCentraldeServicos()">Retornar à Central de Serviços</button>
+		</div>
+
+		<script src=javascript.js></script>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta lang="pt-BR"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="estilo.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<title>Cotação de Serviços</title>
+	</head>
+
+	<body style="background-color: #836FFF" onload="desativaBotao()">
+		<div align='left' class='logo' style="float: left; background-color: tomato;">
+			<a href="centraldeservicos.html"><img src="logo2.png" alt="Logo da Pet Manager" style="width: 310px"></a>
+		</div><br><br>
+
+		<div align="center">
+			<h2 class="titulo" style="width: 285px;">Monte a Cotação</h2><br>
+		</div><p>
+
+		<div align="center" style="height: 352px;">
+			<div class="form-group" style="width: 250px; margin-left: 110px; margin-right: 150px">
+				<input type="date" class="form-control" id="datadacotacao" style="width: 250px; margin-left: 16px"><br>
+				<select class="form-control" id="gatooucachorrocotacao" style="width: 250px; margin-left: 16px" onchange="servicoGatoOuCachorro()">
+					<option selected value="gatooucachorro" id="gatooucachorro">Gato ou Cachorro?</option>
+					<option value="gatoselect" id="gatoselect">Gato</option>
+					<option value="cachorroselect" id="cachorroselect">Cachorro</option>
+				</select>
+			</div>
+
+			<div class="form-group" style="width: 250px; margin-left: 110px; margin-right: 150px">
+				<select class="form-control" id="servicogatooucachorro" style="width: 250px; margin-left: 16px" onchange="servicoGatoOuCachorroValor()"></select>
+			</div>
+
+			<p id="frasevalorunitario" style="margin-right: 55px; margin-left: 32px; color: white;"></p>
+			<input type="number" class="form-control" id="quantidade" min="1" style="width: 250px; margin-right: 40px; margin-left: 32px" placeholder="Quantidade?"><br>
+			<b><p id="totalcotacao" style="margin-right: 55px; margin-left: 32px; font-size: 30px; color: #343a40;"></p></b>
+		</div>
+
+		<div align='center'>
+			<button id="botaofinaliza" class="btn btn-dark" style="width: 240px" onclick="finalizaCotacao()">Finalizar Cotação</button>
+			<button id="botaosalva" class="btn btn-dark" style="width: 240px" onclick="salvaCotacao()">Salvar cotação para o cliente</button>
+			<button id="botaoedita" class="btn btn-dark" onclick="editarCotacao()" style="width: 240px">Editar cotação</button>
+			<button class="btn btn-dark" onclick="reload()" style="width: 240px">Nova cotação</button><br><br>
+			<button class="btn btn-light" style="width: 290px;" onclick="retornaCentraldeServicos()">Retornar à Central de Serviços</button>
+		</div>
+		
+		<b id="valorunitario" style="color: #836FFF"></b>
+
+		<script src=javascript.js></script>
+	</body>
+</html>

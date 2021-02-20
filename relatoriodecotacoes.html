@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<meta lang="pt-BR"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="estilo.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<title>Agendamentos</title>
+	</head>
+
+	<body style="background-color: #836FFF">
+		<div align='left' class='logo' style="float: left">
+			<a href="centraldeservicos.html"><img src="logo2.png" alt="Logo da Pet Manager" style="width: 310px"></a>
+		</div><br><br>
+
+		<div align="center">
+			<h2 class="titulo" style="width: 360px;">Relatório de Cotações</h2><br><br>
+		</div>
+
+		<div align="center" style="padding-right: 18px">
+			<select class="form-control" id="mesrelatorio" style="width: 250px" onchange="imprimiRelatorios()">
+				<option selected value="escolhaomes" id="escolhaomes">Escolha o mês</option>
+				<option value="outubro" id="outubro">Outubro</option>
+				<option value="novembro" id="novembro">Novembro</option>
+				<option value="dezembro" id="dezembro">Dezembro</option>
+			</select>
+		</div><br>
+<!-- 
+		<div align="center" style="height: 50px;">
+			<table class="table table-striped table-dark" border="1" style="width: 520px;">
+				<tr align="center">
+					<td style="width: 141px"><b>Data</b></td>
+					<td><b>E-mail</b></td>
+					<td style="width: 143px;"><b>Valor</b></td>
+				</tr>
+			</table>
+		</div> -->
+
+		<div align='center' id="DivE" style="margin-left: 31%">
+
+			<div align='center' style="height: 49px">
+				<table class="table table-striped table-dark" border="0" style="width: 500px;">
+				
+					<tr align="center">
+						<td style="border-color: #343a40;"><b>Data</b></td>
+						<td style="border-color: #343a40"><b></b>Email</b></td>
+						<td><b>Valor</b></td>
+					</tr>
+				</table>
+			</div>
+
+			<div style="overflow: auto; height: 262px;">
+				<table id="tabelaagendamentos" class="table table-striped table-dark" border="1" style="max-height: 2%; overflow: scroll">
+
+				</table>
+			</div>
+
+		</div><br>
+
+		<div align="center" style="margin-top: 20px;">
+			<button class="btn btn-light" style="width: 290px;" onclick="retornaCentraldeServicos()">Retornar à Central de Serviços</button>
+		</div>
+
+		<script src=javascript.js></script>
+	</body>
+</html>
